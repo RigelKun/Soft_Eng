@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/about.css">
+    <title>About</title>
+</head>
+<body>
+    <header>
+        <a href="{{ url_for('home') }}" class="logo">
+            <img src="{{ url_for('static', filename='img/logo.png') }}" alt="Logo">
+        </a>
+        <nav>
+            <a href="{{ url_for('home') }}">Home</a>
+            <a href="{{ url_for('about') }}">About Us</a>
+            <a href="{{ url_for('database') }}">Database</a>
+            <a href="{{ url_for('prediction') }}">Prediction</a>
+            {% if 'username' in session %}
+                <a href="{{ url_for('logout') }}">Logout</a>
+            {% else %}
+                <a href="{{ url_for('login') }}">Login</a>
+            {% endif %}
+        </nav>
+    </header>
+
+    <div class="about-container">
+        <h1>About Us</h1>
+        <div class="team-photo">
+
+            <div class="team-member">
+                <img src="{{ url_for('static', filename='img/rigel.jpg') }}" alt="Rigel Parco">
+                <div class="team-name">Rigel Parco</div>
+            </div>
+
+            <div class="team-member">
+                <img src="{{ url_for('static', filename='img/person2.jpg') }}" alt="Jane Cagorong">
+                <div class="team-name">Jane Cagorong</div>
+            </div>
+        </div>
+    </div>
+
+<footer>
+    <p>&copy; 2024 DermaDiagnose. All rights reserved.</p>
+</footer>
+</body>
+</html>
