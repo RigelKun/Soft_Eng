@@ -24,9 +24,21 @@
         </nav>
     </header>
 
-    <div class="derma-container">
+    <main class="derma-container">
         <h1>Diagnosis Result</h1>
-        <p><strong>Diagnosis:{{ derma }}</p>
-    </div>
+        <div class="patient-details">
+            <h2>Patient Details</h2>
+            <p><strong>Name:</strong> {{ name }}</p>
+            <p><strong>Age:</strong> {{ age }}</p>
+            <p><strong>Sex:</strong> {{ sex }}</p>
+            <p><strong>Address:</strong> {{ address }}</p>
+        </div>
+        <div class="diagnosis-result">
+            <h2>Diagnosis</h2>
+            <p><strong>Condition:</strong> {{ derma }}</p>
+        </div>
+        <p>Thank you for using our service!</p>
+    </main>
+    
 </body>
 </html>

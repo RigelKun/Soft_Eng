@@ -26,9 +26,9 @@
     <div class="scroll-container">
     <h1>Dermatological Condition Classification</h1>
     <form id="predictionForm" action="{{ url_for('prediction') }}" method="post">
-        <div class="scrollable-symptoms">
+    <div class="scrollable-symptoms">
             <div class="form-group">
-
+                <div class="form-control">
                     <label for="name">Name:</label>
                     <input type="text" id="name" name="name" required><br><br>
         
@@ -36,8 +36,14 @@
                     <input type="number" id="age" name="age" required><br><br>
         
                     <label for="address">Address:</label>
-                    <textarea id="address" name="address" rows="4" cols="50" required></textarea><br><br>
-                </form>
+                    <input type="text" id="address" name="address" required><br><br>
+
+                    <label for="sex">Sex:</label>
+                    <select id="sex" name="sex" required>
+                        <option value="M">Male</option>
+                        <option value="F">Female</option>
+                    </select><br><br>
+                </div>
 
             <div class="tooltip">
                 <button class="tooltip-button">Info</button>
@@ -277,13 +283,6 @@
                 <option value="1">
             </datalist>
             
-            <div class="tooltip">
-                <button class="tooltip-button">Info</button>
-                <span class="tooltip-text">The Patient's Age</span>
-            </div>
-            <input type="number" class="form-control" placeholder="Age" name="age" required>
-            
-
             <input type="submit" value="Predict" class="btn btn-primary">
         </div>
         </form>

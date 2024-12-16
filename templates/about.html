@@ -23,22 +23,42 @@
             {% endif %}
         </nav>
     </header>
-
-    <div class="about-container">
-        <h1>About Us</h1>
-        <div class="team-photo">
-
-            <div class="team-member">
-                <img src="{{ url_for('static', filename='img/rigel.jpg') }}" alt="Rigel Parco">
-                <div class="team-name">Rigel Parco</div>
+    <main>
+        <section class="about-container">
+            <h1>About Us</h1>
+            <div class="team-photo">
+                <div class="team-member">
+                    <img src="{{ url_for('static', filename='img/rigel.jpg') }}" alt="Rigel Parco">
+                    <div class="team-name">Rigel Parco</div>
+                </div>
+                <div class="team-member">
+                    <img src="{{ url_for('static', filename='img/jane.jpg') }}" alt="Jane Cagorong">
+                    <div class="team-name">Jane Cagorong</div>
+                </div>
             </div>
+        </section>
 
-            <div class="team-member">
-                <img src="{{ url_for('static', filename='img/person2.jpg') }}" alt="Jane Cagorong">
-                <div class="team-name">Jane Cagorong</div>
-            </div>
-        </div>
-    </div>
+        <section class="mission-container">
+            <h2>Our Mission</h2>
+            <p>
+                The mission at Derma Diagnose is to be a trustworthy platform for the diagnosis of skin conditions. 
+                Our dream is to give medical practitioners the tools needed for identifying the right treatment options with skin problems. 
+                By using modern technology, we seek to provide a faster, more accurate, and easier way for disease diagnosis in skin disorders.
+            </p>
+        </section>
+
+        <section class="vision-container">
+            <h2>Our Vision</h2>
+            <p>
+                At Derma Diagnose our vision is improving skin care diagnosis through machine learning prediction. Our use of advanced technology, such as 
+                Logistic Regression, helps doctors to diagnose skin problems at early stages and provide quick and suitable treatment. 
+                Our aim is to make these tools easy to use so that healthcare professionals can 
+                have quicker, more accurate care with the patients.We envision improving health outcomes and bringing better, 
+                more reliable skin care to everyone through using this technology.
+            </p>
+        </section>
+    </main>
+
 
 <footer>
     <p>&copy; 2024 DermaDiagnose. All rights reserved.</p>

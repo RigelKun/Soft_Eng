@@ -23,31 +23,36 @@
             {% endif %}
         </nav>
     </header>
-
-    <table>
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>Name</th>
-                <th>Age</th>
-                <th>Sex</th>
-                <th>Address</th>
-                <th>Predicted Condition</th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for patient in patients %}
-            <tr>
-                <td>{{ patient[0] }}</td>  <!-- ID -->
-                <td>{{ patient[1] }}</td>  <!-- Name -->
-                <td>{{ patient[2] }}</td>  <!-- Age -->
-                <td>{{ patient[3] }}</td>  <!-- Sex -->
-                <td>{{ patient[4] }}</td>  <!-- Address -->
-                <td>{{ patient[5] }}</td>  <!-- Predicted Condition -->
-            </tr>
-            {% endfor %}
-        </tbody>
-    </table>
+    <main class="database-container">
+        <h1>Patient Database</h1>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Age</th>
+                        <th>Sex</th>
+                        <th>Address</th>
+                        <th>Predicted Condition</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for patient in patients %}
+                    <tr>
+                        <td>{{ patient.id }}</td>  <!-- ID -->
+                        <td>{{ patient.name }}</td>  <!-- Name -->
+                        <td>{{ patient.age }}</td>  <!-- Age -->
+                        <td>{{ patient.sex }}</td>  <!-- Sex -->
+                        <td>{{ patient.address }}</td>  <!-- Address -->
+                        <td>{{ patient.predicted_condition }}</td>  <!-- Predicted Condition -->
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </main>
+    
     
 </body>
 </html>

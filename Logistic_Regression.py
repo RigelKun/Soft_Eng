@@ -49,7 +49,6 @@ def predict(derma=None):
         perifollicular_parakeratosis = int(request.form.get('perifollicular_parakeratosis'))
         inflammatory_mononuclear_infiltrate = int(request.form.get('inflammatory_mononuclear_infiltrate'))
         band_like_infiltrate = int(request.form.get('band_like_infiltrate'))
-        age = int(request.form.get('age'))
 
         derma = model.predict([[erythema,scaling,definite_borders,itching,koebner_phenomenon,polygonal_papules,follicular_papules,oral_mucosal_involvement,
                                 knee_and_elbow_involvement,scalp_involvement,family_history,
@@ -57,7 +56,7 @@ def predict(derma=None):
                                 exocytosis,acanthosis,hyperkeratosis,parakeratosis,clubbing_rete_ridges,elongation_rete_ridges,
                                 thinning_suprapapillary_epidermis,spongiform_pustule,munro_microabcess,focal_hypergranulosis,
                                 disappearance_granular_layer,vacuolisation_damage_basal_layer,spongiosis,saw_tooth_appearance_retes,
-                                follicular_horn_plug,perifollicular_parakeratosis,inflammatory_mononuclear_infiltrate,band_like_infiltrate,age]])
+                                follicular_horn_plug,perifollicular_parakeratosis,inflammatory_mononuclear_infiltrate,band_like_infiltrate]])
 
         if derma == 0:
             derma = "psoriasis"
