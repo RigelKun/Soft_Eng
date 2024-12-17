@@ -115,7 +115,6 @@ nav a.active {
     color: white; 
 }
 
-/* Mission and Vision Containers */
 .mission-container,
 .vision-container {
     width: 85%;
@@ -146,7 +145,6 @@ nav a.active {
     color: #333;
 }
 
-/* Footer */
 footer {
     position: relative;
     bottom: 0;
